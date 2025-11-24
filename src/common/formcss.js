@@ -10,6 +10,7 @@ module.exports = {
         color: 'black',
         textAlign: 'center',
     },
+    
     formgroup: {
         display: 'flex',
         flexDirection: 'column',

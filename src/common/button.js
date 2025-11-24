@@ -5,6 +5,7 @@ module.exports = {
         // padding: 10,
         // borderRadius: 5,
         // fontSize: 20,
+        
          minWidth: 150,
         // textAlign: 'center',
         margin: 30,

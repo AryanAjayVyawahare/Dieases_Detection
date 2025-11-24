@@ -29,6 +29,12 @@ const Verification = ({ navigation, route }) => {
   console.log(userdata);
   console.log("====================================");
 
+
+
+
+
+  
+
   const [errormsg, setErrormsg] = useState(null);
   const [userCode, setUserCode] = useState("XXXX");
   const [actualCode, setActualCode] = useState(null);

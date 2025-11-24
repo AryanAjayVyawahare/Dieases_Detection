@@ -10,6 +10,7 @@ const Welcome = ({ navigation }) => {
             <Image style={styles.patternbg} source={pattern} />
 
             <View style={styles.container1}>
+                
 
                 <Image style={styles.logo} source={green} />
                 {/* <Image style={styles.logo} source={welcomelogo} /> */}
