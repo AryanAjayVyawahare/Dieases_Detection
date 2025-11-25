@@ -28,13 +28,6 @@ const Verification = ({ navigation, route }) => {
   console.log("====================================");
   console.log(userdata);
   console.log("====================================");
-
-
-
-
-
-  
-
   const [errormsg, setErrormsg] = useState(null);
   const [userCode, setUserCode] = useState("XXXX");
   const [actualCode, setActualCode] = useState(null);
@@ -46,14 +39,14 @@ const Verification = ({ navigation, route }) => {
 
   const Sendtobackend = () => {
     console.log(userCode);
-    // console.log(actualCode);
+    console.log(actualCode);
 
     if (userCode == "XXXX" || userCode == "") {
       setErrormsg("Please enter the code");
       return;
     } else if (userCode == actualCode) {
       setloading(true);
-      // console.log('correct code');
+      console.log('correct code');
       const fdata = {
         email: userdata[0]?.email,
         password: userdata[0]?.password,
@@ -71,7 +64,7 @@ const Verification = ({ navigation, route }) => {
       })
         .then((res) => res.json())
         .then((data) => {
-          // console.log(data);
+          console.log(data);
           if (data.message === "User Registered Successfully") {
             alert(data.message);
             setloading(false);

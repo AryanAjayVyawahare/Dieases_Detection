@@ -14,7 +14,7 @@ const Welcome = ({ navigation }) => {
 
                 <Image style={styles.logo} source={green} />
                 {/* <Image style={styles.logo} source={welcomelogo} /> */}
-                <Text style={styles.Welcome}>WEL-COME</Text>
+                <Text style={styles.Welcome}>Welcome</Text>
                 <Text style={{
                     color: "white", color: '#fff',
                     fontSize: 17, marginBottom: 20,
