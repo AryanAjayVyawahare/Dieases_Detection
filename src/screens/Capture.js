@@ -13,6 +13,7 @@ import {
 import { TextInput, Button } from "react-native-paper";
 import * as ImagePicker from "expo-image-picker";
 import * as Permissions from "expo-permissions";
+
 import pattern from "../../assets/pattern.png";
 import axios from "axios";
 import { Linking } from "react-native";
@@ -45,9 +46,12 @@ const Capture = ({ navigation, route }) => {
         let newfile = {
           uri: data.uri,
           type: `test/${data.uri.split(".")[1]}`,
+
           name: `test.${data.uri.split(".")[1]}`,
         };
         handleUpload(newfile);
+
+
       }
     } else {
       Alert.alert("you need to give up permission to work");
@@ -66,6 +70,7 @@ const Capture = ({ navigation, route }) => {
         let newfile = {
           uri: data.uri,
           type: `test/${data.uri.split(".")[1]}`,
+
           name: `test.${data.uri.split(".")[1]}`,
         };
         handleUpload(newfile);
@@ -79,6 +84,7 @@ const Capture = ({ navigation, route }) => {
     const data = new FormData();
     data.append("file", image);
     data.append("upload_preset", "CropApp");
+    
     data.append("cloud_name", "djnzsplu3");
 
     fetch("https://api.cloudinary.com/v1_1/djnzsplu3/image/upload", {
