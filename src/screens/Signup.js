@@ -69,15 +69,13 @@ const Signup = ({ navigation }) => {
           .then((res) => res.json())
           .then((data) => {
             console.log(data);
-            // handle the response data here
+
             if (data.error === "Invalid Credentials") {
-              // alert('Invalid Credentials')
               setloading(false);
               setErrormsg("Invalid Credentials");
             } else if (
               data.message === "Verification Code Sent to your Email"
             ) {
-              // console.log(data.udata);
               alert(data.message);
               setloading(false);
               navigation.navigate("Verification", { userdata: data.udata });
@@ -85,14 +83,12 @@ const Signup = ({ navigation }) => {
               alert(data.message);
               setloading(false);
               navigation.navigate("Verification", { userdata: data.udata });
-              //  navigation.navigate('login')
             }
           })
           .catch((error) => {
             setloading(false);
             setErrormsg("Email or name already exist");
             console.error(error);
-            // handle any errors here
           });
       }
     }
